@@ -117,7 +117,10 @@ a {
                 line-height: 32px;
                 font-weight: 300;
                 letter-spacing: $letterSpacingMain;
-                color: $colorText;
+                cursor: pointer;
+                &__icon {
+                    color: #838383;
+                }
             }
             &__input {
                 padding-left: 16px;
@@ -133,23 +136,27 @@ a {
                     outline: none;
                     box-shadow: none;
                 }
+                &::placeholder {
+                    color: #a4a4a4;
+                }
             }
             &__button {
                 width: 34px;
                 border: none;
+                color: #838383;
+                cursor: pointer;
             }
         }
     }
     &__block2 {
         @include flexWrap();
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         justify-content: flex-end;
         gap: 26px;
         &__cart {
             width: 32px;
             height: 29px;
-            fill: $colorText;
         }
         &__button {
             @include flexWrap();
@@ -158,8 +165,13 @@ a {
             justify-content: center;
             width: 130px;
             height: 38px;
-            color: #fff;
             background-color: $colorSite;
+            font-size: 15px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #fff;
+            letter-spacing: $letterSpacingMain;
+            cursor: pointer;
         }
     }
 }
