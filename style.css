@@ -231,4 +231,197 @@ a {
 .categories__flag__text__cat-name {
   font-size: 30px;
   color: #f16d7f;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 56px 0;
+}
+.catalog__title {
+  font-size: 30px;
+  line-height: 54px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #222;
+}
+.catalog__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #9f9f9f;
+}
+.catalog__items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+}
+.catalog__items__item {
+  max-width: 360px;
+  max-height: 587px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.catalog__items__item:hover {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.catalog__items__item:hover .catalog__items__item__hover_bg {
+  display: flex;
+}
+.catalog__items__item:hover .catalog__items__item__hover_bg .catalog__items__item__hover_bg__add_to_cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog__items__item__hover_bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 280px;
+  background-color: transparent;
+  background-color: rgba(33, 22, 22, 0.7);
+  display: none;
+}
+.catalog__items__item__hover_bg__add_to_cart {
+  justify-content: space-between;
+  align-items: center;
+  width: 139px;
+  height: 44px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  padding: 0 13px;
+}
+.catalog__items__item__hover_bg__add_to_cart img {
+  width: 26px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+.catalog__items__item__img {
+  width: 100%;
+}
+.catalog__items__item__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 17px;
+  margin: 20px 15px;
+}
+.catalog__items__item__title {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222;
+}
+.catalog__items__item__price {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f16d7f;
+}
+.catalog__button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 212px;
+  height: 48px;
+  background-color: #f16d7f;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #222;
+  margin-bottom: 100px;
+}
+.advantages__img {
+  width: 100%;
+  max-width: 753px;
+  background-image: url(./img/advantages/advantages_women.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.advantages__img__flag {
+  position: absolute;
+  top: 146px;
+  left: 39px;
+}
+.advantages__img__flag__text {
+  font-size: 54px;
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.advantages__img__flag__text__color {
+  color: #f16d7f;
+}
+.advantages__img__flag__text__cat-name {
+  font-size: 32px;
+}
+.advantages__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 48px;
+  color: #fbfbfb;
+  padding: 48px 43px 66px 36px;
+  gap: 54px;
+  width: 100%;
+  max-width: 308px;
+}
+.advantages__blocks__block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 33px;
+}
+.advantages__blocks__block__left {
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages__blocks__block__left__title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin-bottom: 17px;
+}
+.advantages__blocks__block__left__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
 }/*# sourceMappingURL=style.css.map */
