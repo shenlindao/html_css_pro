@@ -23,47 +23,6 @@ a {
     text-decoration: none;
 }
 
-.brand {
-    width: 100%;
-    height: 665px;
-    background-image: url("./img/brand_photo.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #e8e8e8;
-    &__block {
-        &__inner_blocks {
-            @include flexWrap();
-            color: $colorText;
-            flex-direction: row;
-            align-items: center;
-            position: absolute;
-            top: 325px;
-            gap: 16px;
-            &__pink_block {
-                width: 12px;
-                height: 92px;
-                background-color: $colorSite;
-            }
-            &__text {
-                &__title_text {
-                    font-size: 60px;
-                    font-weight: 900;
-                    line-height: 1;
-                    letter-spacing: $letterSpacingMain;
-                }
-                &__low_text {
-                    font-size: 40px;
-                }
-                &__pink_text {
-                    color: $colorSite;
-                    font-size: 40px;
-                }
-            }
-        }
-    }
-}
-
 .header {
     @include flexWrap();
     flex-direction: row;
@@ -172,6 +131,101 @@ a {
             color: #fff;
             letter-spacing: $letterSpacingMain;
             cursor: pointer;
+        }
+    }
+}
+
+.brand {
+    width: 100%;
+    height: 665px;
+    background-image: url("./img/brand_photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e8e8e8;
+    &__block {
+        &__inner_blocks {
+            @include flexWrap();
+            color: $colorText;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            top: 325px;
+            gap: 16px;
+            &__pink_block {
+                width: 12px;
+                height: 92px;
+                background-color: $colorSite;
+            }
+            &__text {
+                &__title_text {
+                    font-size: 60px;
+                    font-weight: 900;
+                    line-height: 1;
+                    letter-spacing: $letterSpacingMain;
+                }
+                &__low_text {
+                    font-size: 40px;
+                }
+                &__pink_text {
+                    color: $colorSite;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+.categories {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    &__man {
+        position: relative;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        width: 560px;
+        height: 542px;
+    }
+    &__woman {
+        position: relative;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        width: 560px;
+        height: 261px;
+    }
+    &__accesories {
+        position: relative;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        width: 560px;
+        height: 261px;
+    }
+    &__kids {
+        position: relative;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+        width: 560px;
+        height: 542px;
+    }
+    &__flag {
+        position: absolute;
+        top: 26px;
+        background-color: #fff;
+        padding: 16px 20px 16px 20px;
+        &__text {
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: $letterSpacingMain;
+            color: $colorText;
+            &__cat-name {
+                font-size: 30px;
+                color: $colorSite;
+            }
         }
     }
 }
