@@ -149,6 +149,7 @@ a {
   justify-content: center;
   height: 51px;
   gap: 50px;
+  list-style: none;
 }
 .menu__item {
   font-size: 14px;
