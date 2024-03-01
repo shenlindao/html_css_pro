@@ -135,6 +135,22 @@ a {
     }
 }
 
+.menu {
+    @include flexWrap();
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+    gap: 50px;
+    &__item {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $colorText;
+    }
+}
+
 .brand {
     width: 100%;
     height: 665px;
@@ -562,13 +578,18 @@ a {
 }
 
 .footer__bottom {
-    @include flexWrap();
-    flex-direction: row;
     min-height: 79px;
     background-color: #e6e6e6;
-    align-items: center;
-    justify-content: space-around;
-    gap: 223px;
+    width: 100%;
+    .wrap {
+        @include flexWrap();
+        flex-direction: row;
+        min-height: 79px;
+        background-color: #e6e6e6;
+        align-items: center;
+        justify-content: space-between;
+        gap: 223px;
+    }
     &__rights {
         font-size: 16px;
         font-weight: 400;
@@ -618,6 +639,58 @@ a {
                     background-image: url("./img/social/hover/twitter.svg");
                 }
             }
+        }
+    }
+}
+
+.footer__menu {
+    height: 260px;
+    padding-top: 109px;
+    padding-bottom: 89px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    &__description {
+        &__title {
+            @include flexWrap();
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 13px;
+            margin-bottom: 29px;
+            &__logo {
+                @extend .header__block1__logo;
+            }
+            &__logo-text {
+                @extend .header__block1__logo-text;
+            }
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: $letterSpacingMain;
+            color: #898989;
+            padding-right: 64px;
+        }
+    }
+    &__item {
+        @include flexWrap();
+        flex-direction: column;
+        &__title {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: $letterSpacingMain;
+            color: $colorSite;
+            margin-bottom: 42px;
+        }
+        &__link {
+            font-size: 16px;
+            line-height: 42px;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #898989;
         }
     }
 }

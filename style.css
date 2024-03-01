@@ -43,11 +43,11 @@ a {
   align-items: center;
   gap: 13px;
 }
-.header__block1__logo {
+.header__block1__logo, .footer__menu__description__title__logo {
   width: 59px;
   height: 51px;
 }
-.header__block1__logo-text {
+.header__block1__logo-text, .footer__menu__description__title__logo-text {
   font-size: 27px;
   line-height: 32px;
   font-weight: 300;
@@ -56,7 +56,7 @@ a {
   color: #222;
   margin-top: 6px;
 }
-.header__block1__logo-text span {
+.header__block1__logo-text span, .footer__menu__description__title__logo-text span {
   color: #f16d7f;
 }
 .header__block1__search {
@@ -139,6 +139,23 @@ a {
   color: #fff;
   letter-spacing: 0.025em;
   cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 51px;
+  gap: 50px;
+}
+.menu__item {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
 }
 
 .brand {
@@ -583,13 +600,18 @@ a {
 }
 
 .footer__bottom {
+  min-height: 79px;
+  background-color: #e6e6e6;
+  width: 100%;
+}
+.footer__bottom .wrap {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   min-height: 79px;
   background-color: #e6e6e6;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 223px;
 }
 .footer__bottom__rights {
@@ -643,4 +665,50 @@ a {
 }
 .footer__bottom__social__item:nth-child(5):hover {
   background-image: url("./img/social/hover/twitter.svg");
+}
+
+.footer__menu {
+  height: 260px;
+  padding-top: 109px;
+  padding-bottom: 89px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+}
+.footer__menu__description__title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+  margin-bottom: 29px;
+}
+.footer__menu__description__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #898989;
+  padding-right: 64px;
+}
+.footer__menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.footer__menu__item__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  margin-bottom: 42px;
+}
+.footer__menu__item__link {
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #898989;
 }/*# sourceMappingURL=style.css.map */
