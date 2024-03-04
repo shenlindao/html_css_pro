@@ -140,15 +140,18 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 51px;
-    gap: 50px;
     list-style: none;
     &__list {
+        padding-bottom: 18px;
         position: relative;
+        &:hover .menu__box {
+            display: flex;
+        }
     }
     &__title {
+        padding: 18px 25px 18px 25px;
+        box-sizing: border-box;
         font-size: 14px;
-        line-height: 26px;
         font-weight: 700;
         text-transform: uppercase;
         color: $colorText;
@@ -158,10 +161,10 @@ a {
         background-color: #fff;
         border-radius: 5px;
         border: $menuBorder;
-        display: flex;
+        display: none;
         position: absolute;
         top: 30px;
-        left: -10px;
+        left: 15px;
         right: auto;
         z-index: 2;
         &::before {

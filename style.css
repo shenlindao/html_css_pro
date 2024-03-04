@@ -147,16 +147,19 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 51px;
-  gap: 50px;
   list-style: none;
 }
 .menu__list {
+  padding-bottom: 18px;
   position: relative;
 }
+.menu__list:hover .menu__box {
+  display: flex;
+}
 .menu__title {
+  padding: 18px 25px 18px 25px;
+  box-sizing: border-box;
   font-size: 14px;
-  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   color: #222;
@@ -166,10 +169,10 @@ a {
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #e8e8e8;
-  display: flex;
+  display: none;
   position: absolute;
   top: 30px;
-  left: -10px;
+  left: 15px;
   right: auto;
   z-index: 2;
 }
