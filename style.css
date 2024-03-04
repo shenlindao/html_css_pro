@@ -20,6 +20,16 @@ a {
   text-decoration: none;
 }
 
+.last:hover .menu__box {
+  right: 0;
+  left: auto;
+}
+
+.last:hover .menu__box::before {
+  right: 50px;
+  left: auto;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
