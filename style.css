@@ -151,12 +151,67 @@ a {
   gap: 50px;
   list-style: none;
 }
-.menu__item {
+.menu__list {
+  position: relative;
+}
+.menu__title {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   color: #222;
+}
+.menu__box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  right: auto;
+  z-index: 2;
+}
+.menu__box::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  transform: rotate(45deg);
+  border-top: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+}
+.menu__headding {
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #232323;
+  width: 235px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.menu__link {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #646464;
+  display: block;
+}
+.menu__link:hover {
+  color: #f16d7f;
+}
+.menu__item {
+  margin-right: 46px;
+}
+.menu__item:last-of-type {
+  margin-right: 0;
 }
 
 .brand {
@@ -692,12 +747,12 @@ a {
   color: #898989;
   padding-right: 64px;
 }
-.footer__menu__item {
+.footer__menu__list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.footer__menu__item__title {
+.footer__menu__list__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -706,7 +761,7 @@ a {
   color: #f16d7f;
   margin-bottom: 42px;
 }
-.footer__menu__item__link {
+.footer__menu__list__link {
   font-size: 16px;
   line-height: 42px;
   font-weight: 400;
