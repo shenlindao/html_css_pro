@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+.mb-100 {
+    margin-bottom: 100px;
+}
+
 .last:hover .menu__box {
     right: 0;
     left: auto;
@@ -444,7 +448,6 @@ a {
     @include flexWrap();
     flex-direction: row;
     background-color: $colorText;
-    margin-bottom: 100px;
     &__img {
         width: 100%;
         max-width: 753px;
@@ -507,6 +510,42 @@ a {
                 }
             }
         }
+    }
+}
+
+.simple-advantages {
+    @include flexWrap();
+    flex-direction: row;
+    background-color: $colorText;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 341px;
+    padding: 48px 13px;
+    &__block {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 360px;
+        gap: 16px;
+    }
+    &__title {
+        color: #fbfbfb;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: left;
+    }
+    &__text {
+        color: #fbfbfb;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0;
+        text-align: center;
+        opacity: 0.8;
     }
 }
 
@@ -800,13 +839,18 @@ a {
         text-transform: uppercase;
         color: #636363;
         & li {
+            &:not(:last-child)::after {
+                content: '/';
+                padding-left: 3px;
+                padding-right: 3px;
+            }
             list-style: none;
             & > a {
                 color: #636363;
             }
             &:last-child {
                 font-weight: 700;
-                color: #f16d7f;
+                color: $colorSite;
             }
         }
     }
