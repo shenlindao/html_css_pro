@@ -817,12 +817,14 @@ a {
 }
 
 .breadcrumbs {
-    @include flexWrap();
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 148px;
     background-color: #f8f3f4;
+    &__box {
+        @include flexWrap();
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 148px;
+    }
     &__title {
         font-size: 24px;
         line-height: 20px;
@@ -840,7 +842,7 @@ a {
         color: #636363;
         & li {
             &:not(:last-child)::after {
-                content: '/';
+                content: "/";
                 padding-left: 3px;
                 padding-right: 3px;
             }
@@ -1074,6 +1076,62 @@ a {
             line-height: 1.2;
             font-weight: 700;
             color: $colorSite;
+        }
+    }
+}
+
+.shop {
+    height: 3259px;
+    margin-top: 59px;
+    &__menu {
+        & details {
+            width: 243px;
+            &[open] {
+                summary::after {
+                    content: "\f0d7";
+                    font-family: "Font Awesome 5 Free";
+                }
+            }
+            &:not(:first-child),
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+        & summary {
+            @include flexWrap();
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $colorSite;
+            border-left: 5px solid $colorSite;
+            border-bottom: 1px solid #ebebeb;
+            height: 37px;
+            padding-left: 11px;
+            cursor: pointer;
+            &::after {
+                content: "\f0da";
+                font-family: "Font Awesome 5 Free";
+                padding-right: 5px;
+            }
+        }
+        & ul {
+            margin-top: 11px;
+            margin-bottom: 11px;
+        }
+        & li {
+            @include flexWrap();
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 17px;
+            list-style: none;
+            height: 37px;
+            cursor: pointer;
+            &:hover {
+                color: $colorSite;
+            }
         }
     }
 }

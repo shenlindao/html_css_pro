@@ -837,13 +837,15 @@ a {
 }
 
 .breadcrumbs {
+  background-color: #f8f3f4;
+}
+.breadcrumbs__box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 148px;
-  background-color: #f8f3f4;
 }
 .breadcrumbs__title {
   font-size: 24px;
@@ -1103,5 +1105,58 @@ a {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 700;
+  color: #f16d7f;
+}
+
+.shop {
+  height: 3259px;
+  margin-top: 59px;
+}
+.shop__menu details {
+  width: 243px;
+}
+.shop__menu details[open] summary::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+}
+.shop__menu details:not(:first-child), .shop__menu details:not(:last-child) {
+  margin-bottom: 18px;
+}
+.shop__menu summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f16d7f;
+  border-left: 5px solid #f16d7f;
+  border-bottom: 1px solid #ebebeb;
+  height: 37px;
+  padding-left: 11px;
+  cursor: pointer;
+}
+.shop__menu summary::after {
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  padding-right: 5px;
+}
+.shop__menu ul {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.shop__menu li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 17px;
+  list-style: none;
+  height: 37px;
+  cursor: pointer;
+}
+.shop__menu li:hover {
   color: #f16d7f;
 }/*# sourceMappingURL=style.css.map */
