@@ -1157,6 +1157,9 @@ a {
   height: 37px;
   cursor: pointer;
 }
-.shop__menu li:hover {
+.shop__menu li a {
+  color: #636363;
+}
+.shop__menu li a:hover {
   color: #f16d7f;
 }/*# sourceMappingURL=style.css.map */

@@ -1129,8 +1129,11 @@ a {
             list-style: none;
             height: 37px;
             cursor: pointer;
-            &:hover {
-                color: $colorSite;
+            & a {
+                color: #636363;
+                &:hover {
+                    color: $colorSite;
+                }
             }
         }
     }
