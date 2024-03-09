@@ -475,6 +475,33 @@ a {
   letter-spacing: 0.025em;
   cursor: pointer;
 }
+.catalog__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  margin-top: 43px;
+  margin-bottom: 110px;
+}
+.catalog__view-all {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #f16d7f;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #f16d7f;
+  cursor: pointer;
+}
 
 .advantages {
   display: flex;
@@ -1325,4 +1352,46 @@ a {
 
 .additional-buttons {
   width: auto;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 261px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+}
+.pagination__arrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  width: 44px;
+  cursor: pointer;
+}
+.pagination__arrow:last-child {
+  color: #f16d7f;
+}
+.pagination__pages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 173px;
+}
+.pagination__page {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+.pagination__page:first-child {
+  color: #f16d7f;
 }/*# sourceMappingURL=style.css.map */

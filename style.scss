@@ -462,6 +462,31 @@ a {
         letter-spacing: $letterSpacingMain;
         cursor: pointer;
     }
+    &__bottom {
+        @include flexWrap();
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 44px;
+        margin-top: 43px;
+        margin-bottom: 110px;
+    }
+    &__view-all {
+        @include flexWrap();
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 44px;
+        background-color: #ffffff;
+        border: 1px solid $colorSite;
+        border-radius: 3px;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        color: $colorSite;
+        cursor: pointer;
+    }
 }
 
 .advantages {
@@ -1294,4 +1319,43 @@ a {
 
 .additional-buttons {
     width: auto;
+}
+
+.pagination {
+    @include flexWrap();
+    align-items: center;
+    justify-content: space-between;
+    width: 261px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    &__arrow {
+        @include flexWrap();
+        align-items: center;
+        justify-content: center;
+        color: #aaaaaa;
+        width: 44px;
+        cursor: pointer;
+        &:last-child {
+            color: $colorSite;
+        }
+    }
+    &__pages {
+        @include flexWrap();
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 173px;
+    }
+    &__page {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        color: #c4c4c4;
+        cursor: pointer;
+        &:first-child {
+            color: $colorSite;
+        }
+    }
 }
