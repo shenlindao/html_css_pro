@@ -185,6 +185,9 @@ a {
 .menu__title:hover {
   color: #f16d7f;
 }
+.menu__title_active {
+  border-bottom: 3px solid #f16d7f;
+}
 .menu__box {
   padding: 20px;
   background-color: #fff;

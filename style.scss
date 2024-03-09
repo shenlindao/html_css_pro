@@ -177,6 +177,9 @@ a {
             color: $colorSite;
         }
     }
+    &__title_active {
+        border-bottom: 3px solid $colorSite;
+    }
     &__box {
         padding: 20px;
         background-color: #fff;
