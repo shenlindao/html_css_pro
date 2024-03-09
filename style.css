@@ -369,7 +369,7 @@ a {
 .catalog__items__item {
   max-width: 360px;
   max-height: 587px;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   position: relative;
   cursor: pointer;
 }
@@ -1249,6 +1249,7 @@ a {
   color: #6f6e6e;
 }
 .filters__options ul.filter_tranding li {
+  cursor: pointer;
   margin-right: 10px;
 }
 .filters__options ul.filter_tranding li:not(:last-child)::after {
@@ -1268,6 +1269,10 @@ a {
   line-height: 20px;
   text-transform: uppercase;
   margin-left: 9px;
+  cursor: pointer;
+}
+.filters__options ul.filter_size input {
+  cursor: pointer;
 }
 .filters__options li {
   list-style: none;
@@ -1275,6 +1280,10 @@ a {
 .filters__options input[type=range] {
   width: 100%;
   accent-color: #f16d7f;
+  cursor: grab;
+}
+.filters__options input[type=range]:active {
+  cursor: grabbing;
 }
 .filters__prices {
   display: flex;
@@ -1301,6 +1310,7 @@ a {
   padding-left: 13px;
   padding-right: 8px;
   border-right: 1px solid #eaeaea;
+  cursor: default;
 }
 .sort__choose {
   display: flex;
@@ -1310,6 +1320,7 @@ a {
   gap: 18px;
   padding-left: 11px;
   padding-right: 8px;
+  cursor: pointer;
 }
 
 .additional-buttons {

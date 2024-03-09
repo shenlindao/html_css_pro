@@ -361,7 +361,7 @@ a {
         &__item {
             max-width: 360px;
             max-height: 587px;
-            background-color: #fff;
+            background-color: hsl(0, 0%, 100%);
             position: relative;
             cursor: pointer;
             &:hover {
@@ -1215,6 +1215,7 @@ a {
             color: $colorFilters;
             &.filter_tranding {
                 & li {
+                    cursor: pointer;
                     margin-right: 10px;
                     &:not(:last-child)::after {
                         margin-left: 12px;
@@ -1236,6 +1237,10 @@ a {
                     line-height: 20px;
                     text-transform: uppercase;
                     margin-left: 9px;
+                    cursor: pointer;
+                }
+                & input {
+                    cursor: pointer;
                 }
             }
         }
@@ -1245,6 +1250,10 @@ a {
         & input[type="range"] {
             width: 100%;
             accent-color: $colorSite;
+            cursor: grab;
+            &:active {
+                cursor: grabbing;
+            }
         }
     }
     &__prices {
@@ -1270,6 +1279,7 @@ a {
         padding-left: 13px;
         padding-right: 8px;
         border-right: $sortBorder;
+        cursor: default;
     }
     &__choose {
         @include flexWrap();
@@ -1278,6 +1288,7 @@ a {
         gap: 18px;
         padding-left: 11px;
         padding-right: 8px;
+        cursor: pointer;
     }
 }
 
