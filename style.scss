@@ -31,6 +31,10 @@ a {
     margin-bottom: 100px;
 }
 
+.alert {
+    color: #ff0d0d;
+}
+
 .last:hover .menu__box {
     right: 0;
     left: auto;
@@ -79,7 +83,7 @@ a {
             @include flexWrap();
             height: 38px;
             flex-direction: row;
-            border: $inputBorder;
+            border: $borderItems;
             border-radius: 3px;
             margin-left: 37px;
             &__browse {
@@ -106,8 +110,8 @@ a {
                 letter-spacing: $letterSpacingMain;
                 color: #a4a4a4;
                 border: none;
-                border-left: $inputBorder;
-                border-right: $inputBorder;
+                border-left: $borderItems;
+                border-right: $borderItems;
                 &:active,
                 &:focus {
                     outline: none;
@@ -184,7 +188,7 @@ a {
         padding: 20px;
         background-color: #fff;
         border-radius: 5px;
-        border: $menuBorder;
+        border: $borderItems;
         display: none;
         position: absolute;
         top: 30px;
@@ -201,8 +205,8 @@ a {
             top: -6px;
             left: 20px;
             transform: rotate(45deg);
-            border-top: $menuBorder;
-            border-left: $menuBorder;
+            border-top: $borderItems;
+            border-left: $borderItems;
         }
     }
     &__headding {
@@ -213,7 +217,7 @@ a {
         letter-spacing: $letterSpacingMain;
         color: #232323;
         width: 235px;
-        border-bottom: $menuBorder;
+        border-bottom: $borderItems;
     }
     &__link {
         font-size: 14px;
@@ -958,7 +962,7 @@ a {
         justify-content: center;
         width: 1140px;
         min-height: 763px;
-        border: $productBorder;
+        border: $borderItems;
         position: absolute;
         top: -86px;
         background-color: #fff;
@@ -976,7 +980,7 @@ a {
         align-items: center;
         justify-content: center;
         width: 147px;
-        border: $productBorder;
+        border: $borderItems;
         position: relative;
         margin-bottom: 18px;
     }
@@ -1027,7 +1031,7 @@ a {
     }
     &__hr {
         width: 642px;
-        border: $productBorder;
+        border: $borderItems;
         margin-bottom: 63px;
     }
     &__property {
@@ -1042,7 +1046,7 @@ a {
         width: 144px;
         height: 35px;
         background-color: #fff;
-        border: $productBorder;
+        border: $borderItems;
         padding-left: 14px;
         color: #bcbcbc;
         & option {
@@ -1060,7 +1064,7 @@ a {
         width: 144px;
         height: 35px;
         background-color: #fff;
-        border: $productBorder;
+        border: $borderItems;
         color: #bcbcbc;
         position: relative;
         option {
@@ -1300,12 +1304,12 @@ a {
         align-items: center;
         height: 30px;
         background-color: #ffffff;
-        border: $sortBorder;
+        border: $borderItems;
     }
     &__name {
         padding-left: 13px;
         padding-right: 8px;
-        border-right: $sortBorder;
+        border-right: $borderItems;
         cursor: default;
     }
     &__choose {
@@ -1359,5 +1363,170 @@ a {
         &:first-child {
             color: $colorSite;
         }
+    }
+}
+
+.order {
+    @include flexWrap();
+    flex-direction: column;
+    width: 100%;
+    margin-top: 61px;
+    margin-bottom: 93px;
+    &__step {
+        &[open] {
+            border-bottom: $borderItems;
+            padding-bottom: 79px;
+        }
+        &[open] summary {
+            border: 0;
+        }
+        & summary {
+            font-size: 16px;
+            line-height: 72px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $colorText;
+            border-bottom: $borderItems;
+            cursor: pointer;
+            &::marker {
+                content: "";
+            }
+        }
+        &_check {
+            @include flexWrap();
+            flex-direction: row;
+        }
+    }
+    &__box {
+        @include flexWrap();
+        flex-direction: row;
+        margin-top: 14px;
+        margin-left: 29px;
+    }
+    &__check,
+    &__login {
+        @include flexWrap();
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 390px;
+        box-sizing: border-box;
+    }
+    &__title {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $colorText;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #b3b2b2;
+        & i {
+            font-size: 10px;
+        }
+    }
+    &__inputs {
+        list-style: none;
+        width: 100%;
+        &_checkboxes {
+            margin-top: 31px;
+            margin-bottom: 33px;
+            & li {
+                @include flexWrap();
+                align-items: center;
+                justify-content: flex-start;
+            }
+            & li:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            & input {
+                cursor: pointer;
+            }
+            & label {
+                font-size: 12px;
+                line-height: 1.2;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $colorText;
+                padding-left: 14px;
+                cursor: pointer;
+            }
+        }
+        &_text {
+            margin-top: 24px;
+            margin-bottom: 33px;
+            & li {
+                @include flexWrap();
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+            }
+            & label {
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 600;
+                color: $colorText;
+                margin-bottom: 16px;
+            }
+            & .alert {
+                margin-top: 22px;
+                font-size: 13px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+            & input {
+                width: 100%;
+                height: 45px;
+                background-color: #fff;
+                border: $borderItems;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 54px;
+                letter-spacing: $letterSpacingMain;
+                padding: 0 22px;
+                box-sizing: border-box;
+                outline: none;
+            }
+        }
+    }
+    &__advantages {
+        list-style: none;
+        margin-top: 33px;
+        margin-bottom: 38px;
+    }
+    &__button_box {
+        @include flexWrap();
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 32px;
+        a {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $colorText;
+        }
+    }
+    &__button {
+        @include flexWrap();
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 50px;
+        background-color: #fff;
+        border: $borderItems;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        cursor: pointer;
     }
 }
