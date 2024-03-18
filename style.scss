@@ -1682,3 +1682,104 @@ a {
         }
     }
 }
+
+.cart {
+    width: 100%;
+    margin-top: 90px;
+    &__products {
+    }
+    &__titles {
+        display: grid;
+        grid-template-columns: 3fr repeat(4, 1fr) 0.5fr;
+        padding-bottom: 20px;
+        place-items: center;
+        border-bottom: $borderItems;
+    }
+    &__title {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.015em;
+        color: $colorText;
+    }
+    &__title:first-child {
+        justify-self: start;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 2fr repeat(4, 1fr) 0.5fr;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        place-items: center;
+        border-bottom: $borderItems;
+    }
+    &__pic {
+        justify-self: start;
+        & img {
+            width: 100px;
+        }
+    }
+    &__details {
+        height: 100%;
+        justify-self: start;
+        @include flexWrap();
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__prod_name {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $colorText;
+    }
+    &__prod_color,
+    &__size {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #575757;
+        & span {
+            font-weight: 300;
+            color: #6f6e6e;
+        }
+    }
+    &__price,
+    &__quantity,
+    &__shipping,
+    &__subtotal,
+    &__action {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #656565;
+    }
+    &__input {
+        width: 54px;
+        height: 30px;
+        border: $borderItems;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: textfield;
+        text-align: center;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &::-moz-inner-spin-button {
+            -moz-appearance: none;
+        }
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+    &__action {
+        & i {
+            color: #c0c0c0;
+            cursor: pointer;
+        }
+    }
+    
+}
