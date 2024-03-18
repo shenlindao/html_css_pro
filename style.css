@@ -6,6 +6,10 @@
   font-family: "Open Sans";
   src: url(./fonts/OpenSans-Regular.ttf);
 }
+@font-face {
+  font-family: "FontAwesome";
+  src: url(./fonts//fa-regular-400.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -1804,5 +1808,189 @@ a {
 }
 .cart__action i {
   color: #c0c0c0;
+  cursor: pointer;
+}
+.cart__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+}
+.cart__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #4a4a4a;
+  padding: 0 39px;
+  cursor: pointer;
+}
+.cart__order {
+  margin: 20px 0 79px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.cart__total {
+  padding: 42px;
+  height: 214px;
+  background-color: #f5f3f3;
+  box-sizing: border-box;
+}
+.cart__total_block1 {
+  text-align: right;
+  border-bottom: 1px solid #eaeaea;
+}
+.cart__total_block2 {
+  margin-top: 17px;
+}
+.cart__sub-total {
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  margin-bottom: 14px;
+}
+.cart__sub-total span {
+  margin-left: 20px;
+}
+.cart__grand-total {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom: 22px;
+}
+.cart__grand-total span {
+  margin-left: 20px;
+  color: #f16d7f;
+}
+.cart__total-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f16d7f;
+  cursor: pointer;
+  border: none;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 22px;
+}
+.form__title {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+}
+.form__subtitle {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #000000;
+}
+.form__select, .form__input {
+  width: 100%;
+  height: 45px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.form__select:active, .form__select:focus, .form__input:active, .form__input:focus {
+  outline: none;
+}
+.form__select::-moz-placeholder, .form__input::-moz-placeholder {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+.form__select::placeholder, .form__input::placeholder {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+.form__select:focus::-moz-placeholder, .form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+.form__select:focus::placeholder, .form__input:focus::placeholder {
+  color: transparent;
+}
+.form__select:not(:focus)::-moz-placeholder, .form__input:not(:focus)::-moz-placeholder {
+  color: #b1b1b1;
+}
+.form__select:not(:focus)::placeholder, .form__input:not(:focus)::placeholder {
+  color: #b1b1b1;
+}
+.form__select-wrapper {
+  position: relative;
+}
+.form__select-wrapper::after {
+  content: "\f0d7";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #bdbdbd;
+}
+.form__select {
+  height: 45px;
+  color: #b1b1b1;
+  padding: 0 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form__select option {
+  height: 45px;
+  line-height: 45px;
+}
+.form__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  height: 35px;
+  border: 1px solid #eaeaea;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  background-color: #fff;
+  padding: 0 12px;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

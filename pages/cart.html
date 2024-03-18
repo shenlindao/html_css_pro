@@ -249,27 +249,34 @@
                     <button class="cart__button">continue shopping</button>
                 </div>
                 <div class="cart__order">
-                    <div class="form">
+                    <form class="form">
                         <div class="form__title">Shipping Adress</div>
-                        <select name="country" id="country" class="div form__select">
-                            <option value="Bangladesh">Bangladesh</option>
-                            <option value="Bangladesh">Russia</option>
-                            <option value="Bangladesh">USA</option>
-                        </select>
+                        <div class="form__select-wrapper">
+                            <select name="country" id="country" class="form__select">
+                                <option value="Bangladesh">Bangladesh </option>
+                                <option value="Bangladesh">Russia</option>
+                                <option value="Bangladesh">USA</option>
+                            </select>
+                        </div>
                         <input type="text" class="form__input" placeholder="State">
                         <input type="text" class="form__input" placeholder="Postcode / Zip">
                         <button class="form__button">get a quote</button>
-                    </div>
-                    <div class="form">
-                        <div class="form__title">get a quote</div>
+                    </form>
+                    <form class="form">
+                        <div class="form__title">coupon discount</div>
                         <div class="form__subtitle">Enter your coupon code if you have one</div>
                         <input type="text" class="form__input" placeholder="State">
-                        <button class="form__button">Apply coupon</button>
-                    </div>
+                        <button type="submit" class="form__button">Apply coupon</button>
+                    </form>
                     <div class="cart__total">
-                        <div class="cart__subtotal">Sub total&nbsp;&nbsp;<span>$900</span></div>
-                        <div class="cart__grand-total">Grand total&nbsp;&nbsp;<span>$900</span></div>
-                        <button class="cart___total-button">proceed to checkout</button>
+                        <div class="cart__total_block1">
+                            <div class="cart__sub-total">Sub total<span>$900</span></div>
+                            <div class="cart__grand-total">Grand total<span>$900</span></div>
+                        </div>
+                        <div class="cart__total_block2">
+                            <button type="submit" class="cart__total-button">proceed to checkout</button>
+                        </div>
+
                     </div>
                 </div>
             </section>
