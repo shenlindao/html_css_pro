@@ -90,6 +90,41 @@ a {
             border: $borderItems;
             border-radius: 3px;
             margin-left: 37px;
+            position: relative;
+            &__details {
+                position: absolute;
+                top: 39px;
+                width: 147px;
+                border-radius: 5px;
+                z-index: 10;
+                background-color: #fff;
+                padding: 10px 47px 26px 16px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+                &__title {
+                    font-size: 16px;
+                    line-height: 32px;
+                    font-weight: 600;
+                    letter-spacing: $letterSpacingMain;
+                    color: $colorText;
+                    margin-top: 8px;
+                    margin-bottom: 10px;
+                    border-bottom: $borderItems;
+                }
+                & ul > li {
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-weight: 300;
+                    letter-spacing: $letterSpacingMain;
+                    list-style: none;
+                    padding-left: 5px;
+                }
+                a {
+                    color: $colorText;
+                    &:hover {
+                        color: $colorSite;
+                    }
+                }
+            }
             &__browse {
                 @include flexWrap();
                 flex-direction: row;
@@ -102,13 +137,14 @@ a {
                 line-height: 32px;
                 font-weight: 300;
                 letter-spacing: $letterSpacingMain;
+                height: 38px;
                 cursor: pointer;
                 &__icon {
                     color: #838383;
                 }
             }
             &__input {
-                padding-left: 16px;
+                padding-left: 103px;
                 font-size: 14px;
                 font-weight: 300;
                 letter-spacing: $letterSpacingMain;
@@ -116,6 +152,7 @@ a {
                 border: none;
                 border-left: $borderItems;
                 border-right: $borderItems;
+                width: 260px;
                 &:active,
                 &:focus {
                     outline: none;
